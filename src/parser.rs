@@ -49,7 +49,8 @@ lazy_static! {
     static ref RX_BLACKBERRY_OS_VERSION: Regex = Regex::new(r"BlackBerry(?:\d+)/([.0-9]+) ").unwrap();
     static ref RE_OSX_IPHONE_OS_VERSION: Regex =
         Regex::new(r"; CPU(?: iPhone)? OS (\d+_\d+(?:_\d+)?) like Mac OS X").unwrap();
-    static ref RE_OSX_OS_VERSION: Regex = Regex::new(r"Mac OS X (10[._]\d+(?:[._]\d+)?)(?:\)|;)").unwrap();
+    // static ref RE_OSX_OS_VERSION: Regex = Regex::new(r"Mac OS X (10[._]\d+(?:[._]\d+)?)(?:\)|;)").unwrap();
+     static ref RE_OSX_OS_VERSION: Regex = Regex::new(r"Mac OS X (1[0-9][._]\d+(?:[._]\d+)?)(?:\)|;)").unwrap();//[0-9]
     static ref RX_HTTP_CLIENT: Regex =
         Regex::new(r"^(?:Apache-HttpClient/|Jakarta Commons-HttpClient/|Java/)").unwrap();
     static ref RX_HTTP_CLIENT_OTHER: Regex = Regex::new(r"[- ]HttpClient(/|$)").unwrap();
